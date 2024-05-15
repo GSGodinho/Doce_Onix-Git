@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Cadastro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Cadastro</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+
+  <ion-list>
+    <form [formGroup]="BrowniesForm" (submit)="Enviar()">
+      <ion-input type="Number" label="ID" labelPlacement="floating"placeholder="00 " [(ngModel)]="brownie.ID" name="_id" required></ion-input>
+
+      <ion-input type="Text" label="Nome"labelPlacement="floating" placeholder="Nome"[(ngModel)]="brownie.nome"name="_nome" required></ion-input>
+      <ion-input type="Number" label="Preço"labelPlacement="floating"placeholder="00.00" [(ngModel)]="brownie.preco"name="_preco" required></ion-input>
+      <ion-datetime presentation="date" preferWheel=true id="datetime"[(ngModel)]="brownie.dataFabricacao" name="_dataFabricacao" required>
+        <span slot="title">Data Fabricação</span></ion-datetime>
+      <ion-textarea label="Descrição" labelPlacement="floating"placeholder="Descrição"[(ngModel)]="brownie.descricao" name="_descricao" required></ion-textarea>
+      <ion-button type="submit">Cadastrar</ion-button>
+      
+    </form>
+  </ion-list>
+</ion-content>

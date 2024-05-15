@@ -1,0 +1,7 @@
+{
+  "name": "Doce_Onix",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
